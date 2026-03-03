@@ -106,5 +106,7 @@ You can also find it on my [Keybase](https://keybase.io/samirrashid) or hosted o
 
 I would love to hear your feedback, constructive or otherwise. As an effort for personal CI/CD and behavioral refactoring, I have made [this anonymous feedback box](https://www.admonymous.co/samir).
 
+<img src="/images/buttons/godsped_button.gif" alt="godsped" class="emoji" style="image-rendering: pixelated;"  width="88px" height="31px">
+
 *[NLP]: Natural Language Processing
 *[TAed]: Teaching Assistant

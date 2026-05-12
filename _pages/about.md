@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Welcome Wanderer, to Samir's Hypertext Garden!"
-bio: "I am a hardcore software engineer and researcher building multiplanetary cellular service at [Starlink](https://starlink.com/). I contribute to the Rust-based [Tock Operating System](https://tockos.org/), where I secure devices such as roots of trust and FIDO security keys."
+bio: "I am a hardcore software engineer and researcher building multiplanetary cellular service at [Starlink Mobile](https://starlink.com/). I contribute to the Rust-based [Tock Operating System](https://tockos.org/), where I secure devices such as roots of trust and FIDO security keys."
 excerpt: 'I am a hardcore hacker on operating systems, hardware, and programming languages. Come visit my digital garden to see what I am growing.'
 author_profile: true
 layout: homepage
@@ -60,6 +60,7 @@ I'd love to talk about anything! Feel free to suggest a time that works [here](h
 - 💾 people who do proper backups
 - 🪄 the magic when things just work
 - 🪐 intellectualizing at night
+- 🫪 favorite emoji and its [analysis](https://jenniferdaniel.substack.com/p/new-emoji-distorted-face)
 - 📰 current favorite [Wikipedia article](https://en.wikipedia.org/wiki/Corrupted_Blood_incident)
 - 🦍 current favorite [game](https://store.steampowered.com/app/1533390/Gorilla_Tag/)
 - 🐳 current favorite [movie](https://www.themoviedb.org/movie/555604-guillermo-del-toro-s-pinocchio)

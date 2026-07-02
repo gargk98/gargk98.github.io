@@ -118,7 +118,7 @@ If you are a student in MIT's [Leaders for Global Operations (LGO)](https://lgo.
 
 The official package includes a useful dual-degree example: [`One_author_two_degrees.tex`](https://mirrors.ctan.org/macros/latex/contrib/mitthesis/examples/cover_page_samples/latex_sources/One_author_two_degrees.tex). The LGO-specific version below follows the current v1.23 interface, with one LGO cover-page addition.
 
-Before the mechanics: **thank you to [Prof. John H. Lienhard](https://lienhard.mit.edu/people/#lienhard)** for maintaining `mitthesis` and for the generous May 2026 email exchange behind this update. He responded my questions promptly, pointed me to the cleaner `\\ &` pattern for multi-department lines, and even prototyped `\LGO` after I asked about native support for the LGO cover-page phrase. He also noted that he needed to check the detail with MIT Libraries before treating it as package-approved, and the current class file still marks the LGO accommodation as tentative. My practical read: LGO theses from prior years have used this line and have been accepted by MIT Libraries, so `\LGO` is useful, but use it at your own risk and have the compiled cover page reviewed by LGO staff and your department reviewer before final submission.
+Before the mechanics: **thank you to [Prof. John H. Lienhard](https://lienhard.mit.edu/people/#lienhard)** for maintaining `mitthesis` and for the generous email exchange behind this update. He responded to my questions promptly, pointed me to the cleaner `\\ &` pattern for multi-department lines, and even wrote the tentative `\LGO` hook after I asked about native support for the LGO cover-page phrase. As of July 2026, he has not activated that command in the release while MIT Libraries discusses general policy for modifying the title page. My practical read: LGO theses from prior years have used this line and have been accepted by MIT Libraries, so the hook is useful, but use it at your own risk and have the compiled cover page reviewed by LGO staff and your department reviewer before final submission.
 {: .notice}
 
 1. In your `MIT-Thesis.tex`, locate:
@@ -168,24 +168,40 @@ Per "Thesis Review and Submission Process", _LGO Handbook_ (accessed on August 3
 
 > "IN CONJUNCTION WITH THE LEADERS FOR GLOBAL OPERATIONS PROGRAM AT THE MASSACHUSETTS INSTITUTE OF TECHNOLOGY".
 
-With v1.23, do not manually insert that line into the middle of the title-page code unless you are stuck on an older `mitthesis.cls` file. The current `mitthesis.cls` has an LGO hook near the title-page block. The clean path is:
+With v1.23, do not manually insert that line into the middle of the title-page code unless you are stuck on an older `mitthesis.cls` file. The current `mitthesis.cls` contains tentative LGO hook code near the title-page block, but Prof. Lienhard clarified in July 2026 that the command is not activated in the release while MIT Libraries reviews the title-page policy question. For now, choose **one** of these two local activation paths; option B is the simplest because it leaves `mitthesis.cls` untouched.
 
-1. Make sure the current `mitthesis.cls` is the class file your project is using. If in doubt, copy the outer `../mitthesis.cls` into `MIT-thesis-template`.
-2. In your `MIT-Thesis.tex`, add this command immediately before `\maketitle`:
-    ```tex
-    \LGO
-    \maketitle
-    ```
-3. If compilation says `Undefined control sequence \LGO`, open your copied `mitthesis.cls`, search for `LGO`, and check whether this line is commented out:
-    ```tex
-    % \NewDocumentCommand\LGO{}{ \bool_gset_true:N \g__mitthesis_LGO_bool }
-    ```
-    If your v1.23 copy has that exact commented line, uncomment it:
-    ```tex
-    \NewDocumentCommand\LGO{}{ \bool_gset_true:N \g__mitthesis_LGO_bool }
-    ```
+**Option A: uncomment the class hook.** Make sure the current `mitthesis.cls` is the class file your project is using. If in doubt, copy the outer `../mitthesis.cls` into `MIT-thesis-template`. Then open your copied `mitthesis.cls`, search for `LGO`, and uncomment this line:
 
-Breadcrumb for my Class of 2026 classmates: the old version of this post told you to copy `mitthesis.cls` and insert the LGO line manually between the degree block and `at~the\par`. That workaround was useful before I noticed the v1.23 LGO hook, thanks for Prof. Lienhard's updates, but it is no longer the first thing I would do. If you already submitted with that older hot fix, there is nothing to revisit; this update is for people starting or rebuilding from the current package.
+```tex
+\NewDocumentCommand\LGO{}{ \bool_gset_true:N \g__mitthesis_LGO_bool }
+```
+
+Then add `\LGO` after `\begin{document}` and before `\maketitle` in `MIT-Thesis.tex`:
+
+```tex
+\LGO
+\maketitle
+```
+
+**Option B: define the hook in your thesis preamble.** This is simpler for now because it avoids editing the class file. In `MIT-Thesis.tex`, add this block in the preamble before `\begin{document}`:
+
+```tex
+\ExplSyntaxOn
+\NewDocumentCommand\LGO{}{ \bool_gset_true:N \g__mitthesis_LGO_bool }
+\ExplSyntaxOff
+\LGO
+```
+
+With option B, leave the normal `\maketitle` line where it already is. If a future `mitthesis` release activates `\LGO` officially, remove the preamble block above and use the normal command before `\maketitle` instead:
+
+```tex
+\LGO
+\maketitle
+```
+
+Do not use option A and option B at the same time; defining `\LGO` twice will create a LaTeX error.
+
+Breadcrumb for my Class of 2026 classmates: the old version of this post told you to copy `mitthesis.cls` and insert the LGO line manually between the degree block and `at~the\par`. That workaround was useful before Prof. Lienhard added the tentative hook code, but it is no longer the first thing I would do. If you already submitted with that older hot fix, there is nothing to revisit; this update is for people starting or rebuilding from the current package.
 {: .notice}
 
 Rebuild your LaTeX project and you should see a cover page like this:

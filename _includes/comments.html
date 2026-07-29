@@ -76,8 +76,9 @@
       {% endif %}
     </section>
   {% when "custom" %}
-    <!-- <h4 class="page__comments-title">{{ comments_label }}</h4> -->
-    <section id="comments"></section>
-    {% include /comments-providers/custom.html %}
+    <h4 class="page__comments-title">{{ comments_label | default: "Comments" }}</h4>
+    <section id="comments" aria-label="Comments">
+      {% include comments-providers/custom.html %}
+    </section>
   {% endcase %}
 </div>

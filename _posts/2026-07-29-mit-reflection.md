@@ -9,6 +9,8 @@ tags:
   - grad-school
 ---
 
+Two months ago, in May 2026, I somehow graduated from MIT four times.[^1] Somewhere in that run of ceremonies, in front of the Great Dome overlooking the Charles River, I listened to [Dr. Lisa Su's inspiring speech](https://news.mit.edu/2026/commencement-address-lisa-su-0528) about being ambitious, solving hard problems, and finding ways to make luck. I also snacked one last time on bananas from the Banana Lounge. The final result was two degrees, an S.M. in EECS and an MBA, through the [Leaders for Global Operations (LGO) program](https://lgo.mit.edu/) with a \$100,000 fellowship.
+
 <figure>
   <a href="/images/2026-07-29-MIT-Reflection/Dome.jpeg">
     <img src="/images/2026-07-29-MIT-Reflection/Dome.jpeg"
@@ -17,18 +19,6 @@ tags:
          height="853">
   </a>
   <figcaption>School of Engineering & Schwarzman College of Computing Advanced Degree Ceremony in front of the Great Dome, May 27, 2026.</figcaption>
-</figure>
-
-Two months ago, in May 2026, I somehow graduated from MIT four times.[^1] Somewhere in that run of ceremonies, in front of the Great Dome overlooking the Charles River, I listened to [Dr. Lisa Su's inspiring speech](https://news.mit.edu/2026/commencement-address-lisa-su-0528) about being ambitious, solving hard problems, and finding ways to make luck. I also snacked one last time on bananas from the Banana Lounge. The final result was two degrees, an S.M. in EECS and an MBA, through the [Leaders for Global Operations (LGO) program](https://lgo.mit.edu/) with a \$100,000 fellowship.
-
-<figure style="max-width: 36rem; margin-left: auto; margin-right: auto;">
-  <a href="/images/2026-07-29-MIT-Reflection/Bananas.jpeg">
-    <img src="/images/2026-07-29-MIT-Reflection/Bananas.jpeg"
-         alt="Junru in MIT graduation regalia holding bananas and a red diploma folder in front of stacked banana boxes"
-         width="853"
-         height="1280">
-  </a>
-  <figcaption>One last snack from the Banana Lounge.</figcaption>
 </figure>
 
 Since then, I have sat down for about half an hour every other day and tried to relive the previous 24 months. I have recorded monologues, chatted with prospective students, reread old essays, and gone back through small stories that would never make a graduation speech. I want to write them down before I get preempted by the "ambitious problem solving" I am taking on after graduation.
@@ -220,6 +210,16 @@ This was a ridiculous amount of MIT infrastructure and human effort for one pair
 All was quiet that night. I hopped back on my red bike and pedaled westward home.
 
 And that wraps up a "typical day" for me.
+
+<figure style="max-width: 36rem; margin-left: auto; margin-right: auto;">
+  <a href="/images/2026-07-29-MIT-Reflection/Bananas.jpeg">
+    <img src="/images/2026-07-29-MIT-Reflection/Bananas.jpeg"
+         alt="Junru in MIT graduation regalia holding bananas and a red diploma folder in front of stacked banana boxes"
+         width="853"
+         height="1280">
+  </a>
+  <figcaption>One last snack from the Banana Lounge.</figcaption>
+</figure>
 
 ## Trips Outside My Usual World
 

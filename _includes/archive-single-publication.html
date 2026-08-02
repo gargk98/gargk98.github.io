@@ -8,7 +8,7 @@
 
 {% assign publication_image = post.image | default: post.header.teaser | default: post.teaser %}
 
-<article class="publication-entry" itemscope itemtype="http://schema.org/CreativeWork">
+<article class="publication-entry" itemscope itemtype="https://schema.org/ScholarlyArticle">
   <div class="publication-entry__media" aria-hidden="true">
     {% if publication_image %}
       <img src="{{ publication_image | relative_url }}" alt="" loading="lazy">

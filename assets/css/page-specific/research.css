@@ -1,0 +1,28 @@
+/* Open research-theme list with restrained icons. */
+.research-theme-list {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.research-theme {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--site-border);
+}
+
+.research-theme__icon {
+  color: var(--site-accent);
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.research-theme__content h3,
+.research-theme__content p {
+  margin-top: 0;
+}
+
+.research-theme__content p {
+  margin-bottom: 0;
+  color: var(--site-text-muted);
+}

@@ -2,6 +2,7 @@
 title: "Statistical distributions for fisheries and marine ecology"
 date: 2026-07-06
 permalink: /blog/statistical-distributions-fisheries-marine-ecology/
+mathjax: true
 categories:
   - statistical-ecology
 tags:

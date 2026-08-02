@@ -1,0 +1,111 @@
+/* Data catalogue grouped by domain without relying on colour alone. */
+.data-domain-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.data-domain-legend__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--site-border);
+  font-size: 0.88rem;
+}
+
+.data-domain-legend__marker {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.data-domain--1 { color: #075f7a; }
+.data-domain--2 { color: #2a6f68; }
+.data-domain--3 { color: #8a4b08; }
+.data-domain--4 { color: #6b4f8a; }
+.data-domain--5 { color: #99523d; }
+.data-domain--6 { color: #3f6475; }
+
+.data-domain-section {
+  margin: 2.5rem 0 3.25rem;
+  color: var(--site-text);
+}
+
+.data-domain-section__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-left: 0.9rem;
+  border-left: 4px solid currentColor;
+}
+
+.data-domain-section__header h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.data-domain-section__eyebrow,
+.data-domain-section__count {
+  color: var(--site-text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.data-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.data-card {
+  padding: 1rem;
+  border: 1px solid var(--site-border);
+  border-top: 3px solid currentColor;
+  border-radius: var(--site-radius);
+  background: var(--site-bg);
+  color: var(--site-text);
+}
+
+.data-card h3 {
+  margin: 0.35rem 0;
+  font-size: 1.1rem;
+}
+
+.data-card p {
+  font-size: 0.9rem;
+}
+
+.data-card__domain,
+.data-provider {
+  color: var(--site-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.data-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.data-badge {
+  padding: 0.2rem 0.45rem;
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  background: var(--site-surface);
+  color: var(--site-text);
+  font-size: 0.72rem;
+}
+
+.data-card__link {
+  margin-bottom: 0;
+}

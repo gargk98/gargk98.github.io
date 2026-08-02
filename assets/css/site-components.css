@@ -1,0 +1,251 @@
+/* Reusable content components. */
+.btn,
+button,
+input[type="submit"] {
+  min-height: 44px;
+  padding: 0.6rem 0.95rem;
+  border: 1px solid var(--site-accent);
+  border-radius: var(--site-radius);
+  background: var(--site-bg);
+  color: var(--site-link);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: var(--site-surface);
+  color: var(--site-link-hover);
+}
+
+.btn--primary,
+.contact-form button[type="submit"] {
+  background: var(--site-accent);
+  color: #ffffff;
+}
+
+.btn--primary:hover,
+.contact-form button[type="submit"]:hover {
+  background: var(--site-link-hover);
+  color: #ffffff;
+}
+
+.archive__item,
+.list__item {
+  max-width: 100%;
+}
+
+.archive__item {
+  margin: 0;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--site-border);
+  background: var(--site-bg);
+}
+
+.archive__item-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--site-font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.archive__item-title a {
+  color: var(--site-heading);
+  text-decoration: none;
+}
+
+.archive__item-title a:hover,
+.archive__item-title a:focus-visible {
+  color: var(--site-link);
+  text-decoration: underline;
+}
+
+.archive__item-excerpt,
+.archive__item-excerpt p,
+.archive__item .page__meta,
+.page__context {
+  margin: 0.35rem 0 0;
+  color: var(--site-text-muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.section-stats,
+.conference-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0;
+  margin: 1.75rem 0 2.25rem;
+  border-top: 1px solid var(--site-border);
+  border-bottom: 1px solid var(--site-border);
+}
+
+.section-stat,
+.conference-summary > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 92px;
+  padding: 0.85rem 1rem;
+  border-right: 1px solid var(--site-border);
+}
+
+.section-stat:last-child,
+.conference-summary > div:last-child {
+  border-right: 0;
+}
+
+.section-stat__value,
+.conference-summary strong {
+  color: var(--site-heading);
+  font-family: var(--site-font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.section-stat__label,
+.conference-summary span {
+  margin-top: 0.4rem;
+  color: var(--site-text-muted);
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.contact-form {
+  max-width: 720px;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.9rem 0 0.3rem;
+  color: var(--site-heading);
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #aebdc5;
+  border-radius: var(--site-radius);
+  background: var(--site-bg);
+  color: var(--site-text);
+}
+
+.contact-form textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form__privacy,
+.contact-setup-panel {
+  color: var(--site-text-muted);
+  font-size: 0.9rem;
+}
+
+.contact-setup-panel {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--site-accent);
+  background: var(--site-surface);
+}
+
+.cv-page {
+  width: 100%;
+}
+
+.cv-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cv-header h2 {
+  margin: 0.1rem 0 0.25rem;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+.cv-kicker {
+  margin: 0;
+  color: var(--site-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cv-subtitle,
+.cv-summary {
+  margin: 0;
+  color: var(--site-text-muted);
+}
+
+.cv-summary {
+  margin-bottom: 1rem;
+}
+
+.cv-actions {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cv-viewer {
+  width: 100%;
+  height: min(78vh, 900px);
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid var(--site-border);
+  background: var(--site-surface);
+}
+
+.cv-viewer object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.plotly-chart {
+  width: 100%;
+  min-height: 360px;
+}
+.talk-figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.talk-figure img {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+}
+
+.page__citation {
+  font-size: 0.9rem;
+}

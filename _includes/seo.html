@@ -129,12 +129,24 @@
 {% endif %}
 
 {% if site.og_image %}
+  <meta property="og:image" content="{{ site.og_image | prepend: '/images/' | prepend: seo_url }}">
+{% endif %}
+
+{% if page.collection == "publications" %}
   <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": {{ page.title | strip_html | jsonify }},
+      "url": {{ page.url | prepend: seo_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ site.author.name | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      }{% if page.venue %},
+      "isPartOf": { "@type": "Periodical", "name": {{ page.venue | jsonify }} }{% endif %}{% if page.doi %},
+      "identifier": {{ page.doi | prepend: "https://doi.org/" | jsonify }}{% endif %}
     }
   </script>
 {% endif %}

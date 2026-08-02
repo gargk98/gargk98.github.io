@@ -164,3 +164,15 @@ La validación final comprobará 375, 430, 768, 1024, 1366 y 1920 px mediante na
 14. Optimizar imágenes de interfaz seguras y añadir dimensiones/lazy loading donde corresponda.
 15. Ejecutar `npm test`, `bundle exec jekyll build`, búsquedas solicitadas, comprobación de enlaces internos, validación HTML, overflow horizontal y revisión visual de los seis anchos.
 
+## 14. Resultados de implementación y validación
+
+- La arquitectura CSS quedó reducida de 22 archivos a 10 y las hojas personalizadas cargadas pasaron de 998 usos de `!important` a 0. Las hojas globales se limitan a base, layout, componentes y responsive; Home, Publications, Research y Data conservan hojas específicas.
+- `npm test` pasa: validación sintáctica y regeneración minificada de JavaScript.
+- `bundle install` y el build Jekyll de producción pasan con `github-pages` 232. Se añadió `tzinfo-data` solo para plataformas Windows; el pipeline JavaScript queda fijado en `package-lock.json` y Bundler resolvió el grafo local sin cambiar la política existente que excluye `Gemfile.lock`.
+- `scripts/validate_site.py` validó 50 archivos HTML generados: objetivos internos, atributos `alt`, nombres accesibles de botones e IDs duplicados, sin errores.
+- Chrome headless validó Home en 375, 430, 768, 1024, 1366 y 1920 px, y todas las secciones principales en los extremos 375/1920 px: 26 casos únicos, sin overflow horizontal ni fallos de estructura básica.
+- El menú móvil cambia `aria-expanded` de `false` a `true` y `aria-hidden` de los enlaces ocultos a `false`. La prueba detectó y permitió corregir una incompatibilidad inicial entre `display:flex` y el algoritmo de medición de greedy navigation.
+- La revisión visual cubrió Home en escritorio/móvil, Publications en escritorio y CV en móvil. No se observaron fondos transparentes accidentales, scroll interno de sidebar, solapamientos o bloques vacíos dominantes.
+- Se optimizaron sin pérdida 10 PNG, verificando igualdad de píxeles. El peso total bajó de 3,854,031 a 3,594,707 bytes (259,324 bytes; 6.7%).
+- La comprobación HTTP distinguió bloqueos de automatización de roturas reales. Se retiraron tres enlaces directos 404 de PICES y se conservaron las páginas oficiales verificadas como fuente estable.
+- Riesgo editorial pendiente: el registro de conferencia de 2022 no se reclasificó automáticamente como publicación revisada por pares porque la evidencia del repositorio no basta para hacerlo con seguridad.

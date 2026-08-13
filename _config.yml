@@ -11,7 +11,7 @@ repository               : "gargk98/gargk98.github.io"  # UPDATE: replace gargk9
 # Site Author
 author:
   name             : "Kunal Garg"
-  avatar           : "images/profile.jpg"  # Place your photo in /images/ folder and rename it profile.jpg
+  avatar           : "profile.jpg"  # Place your photo in /images/ folder and rename it profile.jpg
   bio              : "Ph.D. Candidate in Economics"
   location         : "College Station, TX"
   employer         : "Texas A&M University"

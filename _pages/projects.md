@@ -5,22 +5,28 @@ permalink: /projects/
 author_profile: true
 ---
 
-## Corporate Default Risk: A Quantitative Framework
+## Predicting Corporate Default: A Dynamic Logit Benchmark vs. Machine Learning
 
-**[GitHub Repository](#)** *(link coming soon)* · **[Working Paper](#)** *(coming soon)*
+**[GitHub Repository](https://github.com/gargk98/credit-risk-default-prediction) · [Working Paper](https://github.com/gargk98/credit-risk-default-prediction/blob/main/paper/working_paper.pdf)**
 
-**Tools:** Python · scikit-survival · XGBoost · SHAP · DoubleML · WRDS (Compustat, CRSP)
+*Joint work with [Rajib Oraon](https://github.com/rajibor24)*
 
-This project builds an end-to-end corporate credit risk framework using public firm-level data, benchmarking traditional survival models against machine learning approaches and applying causal inference to identify structural drivers of default.
+**Tools:** Python · scikit-learn · XGBoost · lifelines · WRDS (Compustat, CRSP)
 
-**Data:** Merged Compustat and CRSP panel (firm × year), following Campbell, Hilscher & Szilagyi (2008). Default events defined via CRSP delisting codes for Chapter 7/11 filings. Features include both accounting-based predictors (leverage, interest coverage, ROA, current ratio) and market-based predictors (market leverage, trailing equity returns, rolling volatility, Merton Distance-to-Default).
+Does a flexible machine-learning model actually improve corporate default prediction over a strong, interpretable benchmark? This project builds a point-in-time firm-year panel of U.S. non-financial public firms (Compustat + CRSP, 1980–2022) and runs a like-for-like horse race between a **dynamic logit** (discrete-time hazard) model and an **XGBoost** classifier — same panel, same features, same outcome — under a genuine out-of-time evaluation.
 
-**Methodology:**
+**Headline result:** ranking and calibration come apart, but not on a calendar. XGBoost ranks slightly better throughout. Both models are well-calibrated in ordinary years but fail in *opposite directions* during two macro-shock episodes — under-predicting defaults by about half in 2007–2008, and over-predicting them by roughly an order of magnitude in 2020–2022.
 
-- **Cox Proportional Hazards** (baseline) — models time-to-default explicitly; estimates 1, 2, and 3-year default probabilities
-- **Random Survival Forest + XGBoost** — benchmarked against Cox on concordance index and Brier score; three-way horse race includes Merton structural model as canonical benchmark
-- **Out-of-time validation** — trained on pre-2005 data, tested on 2005–2010 to stress-test generalization through the financial crisis
-- **SHAP explainability** — global feature importance and individual waterfall plots decomposing firm-level default probability into per-variable contributions
-- **Double ML (Chernozhukov et al.)** — estimates causal effect of leverage on default hazard, partialling out confounders to quantify bias in the naive Cox coefficient
+![Calibration over time: predicted PD vs. realized default rate](https://github.com/gargk98/credit-risk-default-prediction/raw/main/figures/calibration_time_series.png)
+*Predicted and realized default rates track closely for most of the sample and separate sharply at two points — falling below realized defaults around the financial crisis, then rising well above them in the pandemic years.*
 
-**Extensions (time-permitting):** Credit-to-equity alpha signal (long-short portfolio based on model-implied PD deterioration); macro stress testing calibrated to 2008 recession scenarios (CCAR/DFAST framework).
+**Key findings:**
+
+- Discrimination is strong but the edge is narrow — out-of-sample AUC-ROC is ~0.90–0.93 for both models; a DeLong test finds XGBoost's edge statistically significant only in the one window with no macro shock (2011–2015, *p* = 0.001)
+- XGBoost's clearest, most consistent advantage is rare-event ranking (AUC-PR), running roughly an order of magnitude above the no-skill baseline in every window
+- Calibration fails only around macro shocks — clean across twelve ordinary years, breaking down sharply in 2007–2008 and 2020–2022, in opposite directions and for different reasons
+- The logit trails on AUC-PR but stays economically legible, with signed, standard-error-backed marginal effects that the tree ensemble doesn't provide
+
+**Methodology:** point-in-time panel construction with no look-ahead bias, out-of-time evaluation across three non-overlapping forward windows (2006–2010, 2011–2015, post-2015), standard errors clustered by firm, DeLong tests for model comparison, Platt-scaled calibration, and a Basel-style expected-loss bridge (PD × EAD × LGD).
+
+Full write-up, code, and reproduction instructions are in the [repo README](https://github.com/gargk98/credit-risk-default-prediction).

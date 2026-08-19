@@ -1,9 +1,7 @@
 main:
   - title: "Homepage"
     url: /
-  - title: "Research"
+  - title: "Research & Projects"
     url: /research/
-  - title: "Projects"
-    url: /projects/
   - title: "CV"
     url: /files/cv_kunalgarg.pdf

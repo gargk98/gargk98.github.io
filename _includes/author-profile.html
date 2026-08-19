@@ -6,11 +6,15 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
+   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    <a href="{{ author.avatar }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    </a>
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+    <a href="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+    </a>
     {% endif %}
   </div>
 

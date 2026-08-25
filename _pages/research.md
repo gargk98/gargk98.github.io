@@ -9,12 +9,21 @@ author_profile: true
 
 ### Belief Stabilization and the Flood Insurance Gap: Evidence from the National Flood Insurance Program
 
-This project studies how households form and revise beliefs about flood risk when deciding whether to renew flood insurance. I use OpenFEMA's redacted NFIP policy data, a panel of over 67 million flood insurance policies issued between 2009 and 2023, which I link into individual policy histories despite the absence of a native tracking ID. I document a systematic pattern in renewal behavior: new policyholders in Census Block Groups that experience a nearby flood claim cancel their coverage less often than new policyholders in unaffected areas. This gap narrows steadily with tenure and is essentially gone by year seven or eight of holding a policy (see the cancellation-rate-by-tenure graph below).
+This project studies how households form and revise beliefs about flood risk when deciding whether to renew flood insurance.
+
+**Data:** OpenFEMA's redacted NFIP policy data, a panel of over 67 million flood insurance policies issued between 2009 and 2023, which I link into individual policy histories despite the absence of a native tracking ID.
+
+**Key finding:** New policyholders in Census Block Groups that experience a nearby flood claim cancel their coverage less often than new policyholders in unaffected areas. This gap narrows steadily with tenure and is essentially gone by year seven or eight of holding a policy.
 
 ![Cancellation rate by tenure](/images/flood_cancellation_by_tenure.png)
 *Cancellation rate by tenure, for policyholders in Census Block Groups with a nearby flood claim versus unaffected areas.*
 
-I interpret this as belief updating that stabilizes with experience: households learn from local flood signals early on, but their responsiveness to new information declines as tenure accumulates, consistent with the rational inattention literature (Sims 2003; Gabaix 2014). A competing, purely mechanical explanation is also possible: a fixed population of households who never update and simply outlast the more responsive ones could produce the same decaying gap through composition alone, without any individual actually learning anything. To distinguish the two, I am building a structural model of belief formation and insurance renewal that allows for two types of households, one whose beliefs never move and one that updates as in the baseline model, and estimating how much of the pattern in the data reflects genuine learning versus this kind of survivorship.
+**Interpretation:**
+
+- Households may learn from local flood signals early on, with their responsiveness to new information declining as tenure accumulates, consistent with the rational inattention literature (Sims 2003; Gabaix 2014)
+- A competing, purely mechanical explanation is also possible: a fixed population of households who never update and simply outlast the more responsive ones could produce the same decaying gap through composition alone, without any individual actually learning anything
+
+**Next steps:** I am building a structural model of belief formation and insurance renewal that allows for two types of households, one whose beliefs never move and one that updates as in the baseline model, to estimate how much of the pattern in the data reflects genuine learning versus this kind of survivorship.
 
 ---
 

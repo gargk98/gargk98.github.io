@@ -18,7 +18,9 @@ I interpret this as belief updating that stabilizes with experience: households 
 
 ---
 
-### Corporate Board Management and Greenhouse Gas Emissions *(with coauthors)*
+### Corporate Board Management and Greenhouse Gas Emissions
+
+*Joint work with [Eric Lewis](https://sites.google.com/site/erickylelewis/home), [Aurelie Slechten](https://sites.google.com/site/aurelieslechten/), and [Dakshina De Silva](https://sites.google.com/view/dakshinadesilva/home)*
 
 We examine how mandatory environmental disclosure affects board composition by exploiting a regulatory reporting shock. We construct merged administrative and governance datasets and apply Synthetic DiD methods, while exploring potential implications for director compensation.
 

@@ -14,6 +14,15 @@
   .paper-panel.is-open { display: block; }
   .paper-panel p { margin: 0 0 0.8em; }
   .paper-panel ul { margin-top: 0; }
+
+  /* Homepage fact rows: muted label on the left, content on the right */
+  .hp-facts { list-style: none; margin: 1.2em 0; padding: 0; }
+  .hp-facts li { display: grid; grid-template-columns: 9.5em 1fr; column-gap: 1em; margin: 0 0 0.55em; line-height: 1.5; }
+  .hp-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.65; padding-top: 0.25em; }
+  @media (max-width: 600px) {
+    .hp-facts li { grid-template-columns: 1fr; margin-bottom: 0.8em; }
+    .hp-label { padding-top: 0; }
+  }
 </style>
 <noscript><style>.paper-panel { display: block; } .paper-toggles { display: none; }</style></noscript>
 <script>

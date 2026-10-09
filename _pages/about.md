@@ -1,29 +1,20 @@
 ---
 permalink: /
-title: "Welcome!"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a Ph.D. candidate in Economics at Texas A&M University, working in industrial organization and applied microeconomics. My research asks how households and firms respond to risk, regulation, and new information. I answer those questions by building large panels out of messy administrative records and estimating causal effects from natural experiments and policy changes, and, where the data alone can't separate competing explanations, by writing down a model of the decision and using it to simulate what a policy change would do.
+**Ph.D. candidate in Economics at Texas A&M University** (industrial organization). I build large datasets from messy administrative records and use them to study how households and firms respond to risk and new information.
 
-**Research interests:** Industrial organization · Applied microeconomics · Insurance markets and disaster risk · Credit markets · Information frictions
+**On the 2026–27 job market** for **data science and economist roles in tech** and **economic consulting**, as well as quantitative research in finance. · [CV](/files/cv_kunalgarg.pdf)
 
-### Methods and tools
+<ul class="hp-facts">
+  <li><span class="hp-label">Research interests</span><span>Industrial organization · Applied microeconomics · Insurance and credit markets · Information frictions</span></li>
+  <li><span class="hp-label">Methods</span><span>Causal inference (natural experiments, difference-in-differences) · Structural modeling · Machine learning (XGBoost) · Survival models</span></li>
+  <li><span class="hp-label">Tools</span><span><strong>Python, SQL</strong>, Stata, R, MATLAB, Git, HPC</span></li>
+  <li><span class="hp-label">Background</span><span>M.Sc. Quantitative Economics, <strong>Indian Statistical Institute, Delhi</strong> · B.A. Economics, University of Delhi · Research Associate, <strong>CAFRAL (Reserve Bank of India)</strong></span></li>
+</ul>
 
-- **Causal inference:** natural experiments, difference-in-differences, panel regressions with fixed effects
-- **Modeling and prediction:** structural models of consumer and firm decisions estimated by simulated method of moments and maximum likelihood, policy simulations, survival and hazard models, gradient boosting (XGBoost), probability calibration, out-of-time validation
-- **Data:** record linkage and entity resolution at scale (67 million+ records), SQL (DuckDB), administrative, financial (Compustat, CRSP via WRDS), and geospatial data
-- **Programming:** Python (pandas, NumPy, SciPy, scikit-learn, XGBoost), Stata, R, MATLAB, Git, HPC/SLURM, QGIS, LaTeX
-
-### Background
-
-I completed my B.A. (Honours) in Economics at Ramjas College, University of Delhi, followed by an M.S. in Quantitative Economics (MSQE) at the Indian Statistical Institute, Delhi (2018-2020). Prior to joining the Ph.D. program, I was a Research Associate at CAFRAL (Reserve Bank of India) and a Teaching Fellow at Ashoka University.
-
-I am on the job market for quantitative research, data science, and other applied positions. You can find my [CV here](/files/cv_kunalgarg.pdf).
-
-Feel free to reach out at [kunalgarg@tamu.edu](mailto:kunalgarg@tamu.edu).
-
-Outside of research, I enjoy variant Sudoku puzzles, particularly the style featured on [Cracking the Cryptic](https://www.youtube.com/@CrackingTheCryptic) and [Logic Masters Germany](https://logic-masters.de/).
+Outside work, I enjoy variant Sudoku, particularly the style featured on [Cracking the Cryptic](https://www.youtube.com/@CrackingTheCryptic) and [Logic Masters Germany](https://logic-masters.de/).

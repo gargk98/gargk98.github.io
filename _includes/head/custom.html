@@ -17,7 +17,8 @@
 </style>
 <noscript><style>.paper-panel { display: block; } .paper-toggles { display: none; }</style></noscript>
 <script>
-  // Clicking Abstract or Details opens that panel and closes the other one; clicking again closes it.
+  /* Clicking Abstract or Details opens that panel and closes the other one; clicking again closes it.
+     Use block comments only: the theme puts the whole page on one line, which breaks // comments. */
   document.addEventListener("click", function (e) {
     var btn = e.target.closest(".paper-toggle");
     if (!btn) return;

@@ -9,12 +9,12 @@ redirect_from:
 
 I am a Ph.D. candidate in Economics at Texas A&M University, working in industrial organization and applied microeconomics. My research asks how households and firms respond to risk, regulation, and new information. I answer those questions by building large panels out of messy administrative records and estimating causal effects from natural experiments and policy changes, and, where the data alone can't separate competing explanations, by writing down a model of the decision and using it to simulate what a policy change would do.
 
-**Research interests:** Industrial organization · Applied microeconomics · Insurance markets and disaster risk · Environmental and energy economics
+**Research interests:** Industrial organization · Applied microeconomics · Insurance markets and disaster risk · Credit markets · Information frictions
 
 ### Methods and tools
 
-- **Causal inference:** natural experiments, difference-in-differences and synthetic difference-in-differences, synthetic control, panel regressions, randomized controlled trials (field implementation)
-- **Modeling and prediction:** structural models of consumer and firm decisions with policy counterfactuals, survival and hazard models, gradient boosting (XGBoost), probability calibration, out-of-time validation
+- **Causal inference:** natural experiments, difference-in-differences, panel regressions with fixed effects
+- **Modeling and prediction:** structural models of consumer and firm decisions estimated by simulated method of moments and maximum likelihood, policy simulations, survival and hazard models, gradient boosting (XGBoost), probability calibration, out-of-time validation
 - **Data:** record linkage and entity resolution at scale (67 million+ records), SQL (DuckDB), administrative, financial (Compustat, CRSP via WRDS), and geospatial data
 - **Programming:** Python (pandas, NumPy, SciPy, scikit-learn, XGBoost), Stata, R, MATLAB, Git, HPC/SLURM, QGIS, LaTeX
 

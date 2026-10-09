@@ -15,14 +15,24 @@
   .paper-panel p { margin: 0 0 0.8em; }
   .paper-panel ul { margin-top: 0; }
 
-  /* Homepage fact rows: muted label on the left, content on the right */
-  .hp-facts { list-style: none; margin: 1.2em 0; padding: 0; }
-  .hp-facts li { display: grid; grid-template-columns: 9.5em 1fr; column-gap: 1em; margin: 0 0 0.55em; line-height: 1.5; }
-  .hp-label { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.65; padding-top: 0.25em; }
-  @media (max-width: 600px) {
-    .hp-facts li { grid-template-columns: 1fr; margin-bottom: 0.8em; }
-    .hp-label { padding-top: 0; }
-  }
+  /* Homepage: intro, job market bar, three columns, and short lines below */
+  @media (min-width: 1024px) { .page:has(.hp2) { padding-right: 2em !important; } }
+  .hp2 { --acc: var(--global-base-color, #2f7f93); --rule: var(--global-dark-border-color, #bdc1c4); }
+  .hp2 p { margin: 0 0 0.8em; }
+  .hp2-status { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.6em; padding: 0.55em 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 1.2em 0 1.3em !important; }
+  .hp2-dot { display: inline-block; width: 0.6em; height: 0.6em; border-radius: 50%; background: #2e9b5f; margin-right: 0.5em; vertical-align: 0.08em; }
+  .hp2-status-text { flex: 1 1 22em; line-height: 1.45; }
+  .hp2-status a { margin-left: auto; font-size: 0.85em; font-weight: 600; white-space: nowrap; align-self: center; }
+  .hp2-grid { display: grid; grid-template-columns: 1fr 0.75fr 1.35fr; margin-bottom: 1.4em; }
+  .hp2-grid section { padding: 0 1.1em; border-left: 1px solid var(--rule); }
+  .hp2-grid section:first-child { padding-left: 0; border-left: none; }
+  .hp2-grid h3 { font-size: 0.82em; color: var(--acc); margin: 0 0 0.5em; }
+  .hp2-grid ul { list-style: none; margin: 0; padding: 0; }
+  .hp2-grid li { font-size: 0.9em; line-height: 1.4; margin: 0 0 0.45em; }
+  .hp2-lines { list-style: none; margin: 0 0 1em; padding: 0; }
+  .hp2-lines li { font-size: 0.9em; line-height: 1.5; margin: 0 0 0.5em; }
+  .hp2-outside { margin-top: 1.2em !important; }
+  @media (max-width: 600px) { .hp2-status a { margin-left: 0; } .hp2-grid { grid-template-columns: 1fr; gap: 1em; } .hp2-grid section { padding: 0; border-left: none; } }
 </style>
 <noscript><style>.paper-panel { display: block; } .paper-toggles { display: none; }</style></noscript>
 <script>

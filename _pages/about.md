@@ -7,7 +7,18 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. candidate in Economics (Industrial Organization) in the Department of Economics at Texas A&M University, with a strong quantitative and computational background. I have experience in **large-scale data analysis**, **structural and reduced-form methods**, **numerical optimization**, and **causal inference**, with strong **Python** proficiency and applied **machine learning** experience, including **gradient-boosted models**. I enjoy working with large, messy administrative datasets and turning them into rigorous, credible answers to applied questions.
+I am a Ph.D. candidate in Economics at Texas A&M University, working in industrial organization and applied microeconomics. My research asks how households and firms respond to risk, regulation, and new information. I answer those questions by building large panels out of messy administrative records and estimating causal effects from natural experiments and policy changes, and, where the data alone can't separate competing explanations, by writing down a model of the decision and using it to simulate what a policy change would do.
+
+**Research interests:** Industrial organization · Applied microeconomics · Insurance markets and disaster risk · Environmental and energy economics
+
+### Methods and tools
+
+- **Causal inference:** natural experiments, difference-in-differences and synthetic difference-in-differences, synthetic control, panel regressions, randomized controlled trials (field implementation)
+- **Modeling and prediction:** structural models of consumer and firm decisions with policy counterfactuals, survival and hazard models, gradient boosting (XGBoost), probability calibration, out-of-time validation
+- **Data:** record linkage and entity resolution at scale (67 million+ records), SQL (DuckDB), administrative, financial (Compustat, CRSP via WRDS), and geospatial data
+- **Programming:** Python (pandas, NumPy, SciPy, scikit-learn, XGBoost), Stata, R, MATLAB, Git, HPC/SLURM, QGIS, LaTeX
+
+### Background
 
 I completed my B.A. (Honours) in Economics at Ramjas College, University of Delhi, followed by an M.S. in Quantitative Economics (MSQE) at the Indian Statistical Institute, Delhi (2018-2020). Prior to joining the Ph.D. program, I was a Research Associate at CAFRAL (Reserve Bank of India) and a Teaching Fellow at Ashoka University.
 
@@ -15,4 +26,4 @@ I am on the job market for quantitative research, data science, and other applie
 
 Feel free to reach out at [kunalgarg@tamu.edu](mailto:kunalgarg@tamu.edu).
 
-Outside of research, I enjoy variant Sudoku puzzles — particularly the style featured on [Cracking the Cryptic](https://www.youtube.com/@CrackingTheCryptic) and [Logic Masters Germany](https://logic-masters.de/).
+Outside of research, I enjoy variant Sudoku puzzles, particularly the style featured on [Cracking the Cryptic](https://www.youtube.com/@CrackingTheCryptic) and [Logic Masters Germany](https://logic-masters.de/).

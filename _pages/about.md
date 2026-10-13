@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 <div class="hp2">
-  <p class="hp2-lede">I am a <strong>Ph.D. candidate in Economics at Texas A&amp;M University</strong>, working in industrial organization and applied microeconomics. I build large datasets from messy administrative records and use them to study how households and firms respond to risk and new information.</p>
+  <p class="hp2-lede">I am a <strong>Ph.D. candidate in Economics at Texas A&amp;M University</strong>, working in industrial organization and applied microeconomics. My research studies how households and firms respond to risk and new information, mostly in insurance and credit markets. My <a href="/research/">job market paper</a> asks why households drop flood insurance, and how a flood claim in their neighborhood changes that decision over the years they stay insured.</p>
   <div class="hp2-status"><span class="hp2-status-text"><span class="hp2-dot"></span><strong>On the 2026–27 job market</strong> for data science and economist roles in tech, economic consulting, and quantitative research in finance</span><a href="/files/cv_kunalgarg.pdf">View CV (PDF)</a></div>
   <div class="hp2-grid">
     <section>
